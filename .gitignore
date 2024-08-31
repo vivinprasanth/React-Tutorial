@@ -1,7 +1,6 @@
 /node_modules  
 # node_modules can be regenareted due to the log in package-lock.json
 
-# /dist
-# /.parcel-cache
+/dist
+/.parcel-cache
 # these two files are temporary, created when we run parcel: npx parcel index.html
-
