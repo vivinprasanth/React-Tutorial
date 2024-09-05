@@ -3,6 +3,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
+import Error from "./components/Error";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
 
@@ -20,10 +24,29 @@ const AppLayout = () => {
     )
 }; 
 
+const appRoute = createBrowserRouter ([
+    {
+        path : "/",
+        element: <AppLayout/>,
+        errorElement: <Error/>
+    },
+    {
+        path: "/AboutUs",
+        element: <AboutUs/>
+    },
+    {
+        path : "/Contact",
+        element: <Contact/>
+    }
+
+]);
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("divisionid"));
+root.render(<RouterProvider router={appRoute} />);
 
-root.render(<AppLayout />) ;
+// root.render(<AppLayout />) ;
 
 
 
