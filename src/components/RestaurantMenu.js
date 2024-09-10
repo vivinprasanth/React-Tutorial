@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-// this hook is used for getting the 
+// this hook is used for getting and accessing the path (more like use the parameter) 
 
 
 
@@ -18,7 +18,7 @@ const RestaurantMenu = () => {
 
     useEffect(() => {
         fetchMenu(); 
-    }, []);
+    },[]);
 
     fetchMenu = async () => {
         const data = await fetch(
@@ -40,7 +40,7 @@ const RestaurantMenu = () => {
     console.log('resInfo.cards', resInfo.cards);
     console.log('itemCards', itemCards);
     
-    
+
 
   
     return (
