@@ -54,8 +54,8 @@ const Body = () => {
         (
         <div className="body-container">
             <div className="filter">
-                <div className="search-container">
-                    <input type="text"  className="search-bar" placeholder="search" value={searchText} 
+                <div className="search-container m-4">
+                    <input type="text"  className="search-bar border border-solid border-black" placeholder="search" value={searchText} 
                     onChange={(e)=>{
                         setsearchText(e.target.value);
                         // initially the search input does not take the value (infact value cant be typed)
@@ -65,7 +65,7 @@ const Body = () => {
                         // here searchText gets updates => new rendering happens for each letter
                         // Reconsilation
                     }} />
-                    <button className="searchButton" 
+                    <button className="searchButton  px-4 m-2 mr-6 border border-solid rounded-xl bg-green-300" 
                         onClick={() => {
                             // console.log(searchText)
                             const filteredRestaurantList = initialList.filter((res)=>(
@@ -77,7 +77,7 @@ const Body = () => {
                         search
                     </button>
                     <button 
-                        className="filter-btn" onClick = { () => {
+                        className="filter-btn px-4 border border-solid bg-gray-500 rounded-xl" onClick = { () => {
                             filterList = initialList.filter(
                                 (res) => (res.info.avgRating > 4.5)) ;
                             finalList(filterList) ; 
@@ -86,7 +86,7 @@ const Body = () => {
                 </div>
             </div>
 
-            <div className="restaurant-container">      
+            <div className="restaurant-container flex flex-wrap">      
                 {
                     // initialList.map((restaurant) => (
                     // <RestaurantCard key = {restaurant.info.id} RestaurantData = {restaurant} />
