@@ -1066,3 +1066,7 @@ root.render(<RouterProvider router={appRoute} />);
 // const root = ReactDOM.createRoot(document.getElementById("divisionid"));
 
 // root.render(<AppLayout />) ;
+
+
+
+// second msg associated with index.html
